@@ -85,16 +85,18 @@ header{
            
 
      }
-   
-.navbar-menu:hover ul {
+   @media (max-width:757px){
+
+     .nav-container:hover ul {
       display: grid;
       grid-template-columns: repeat(1,auto);
       grid-template-rows: repeat(4,auto);
       place-items: center;
       row-gap: 1rem;
-     padding-top: 1rem;
-     padding-bottom: 1rem;
-     background-color: #FF6B1A;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background-color: #FF6B1A;
+}
 }
 
 .menu ul{
@@ -112,7 +114,7 @@ header{
     
 }
 
-@media (min-width: 991px) {
+@media (min-width: 757px) {
      .navbar-menu{
            display: flex;
            align-items: center;
@@ -130,8 +132,22 @@ header{
      color: #FFFFFF;
      font-weight: 500;
      font-size:1.7rem ;
+     li a{
+            display: flex;
+             width:10.3rem;
+           height: 2.8rem;
+            
+           justify-content: center;
+           align-items: center;
+           border-radius: 0.8rem;
+           transition: background-color 0.2s linear,  transform 0.4s linear; 
      }
-
+     }
+  .menu ul li a:hover{
+           background-color: #FF6B1A;
+           transform: scale(1.1);
+          
+  }
   .menu-btn{
      display: none;
   }
