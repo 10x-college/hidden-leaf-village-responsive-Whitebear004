@@ -25,22 +25,19 @@ header{
 }
 
 .logo-wrapper{ 
-         a{
-           img{
-               position:relative;
-               top:3rem ;
-               left: 3.8rem;
-               width: 3.4rem;
-               height: 3rem;
-           }
-         }
          h1{
             display: flex;
             justify-content: center;
             font-size: 2.4rem;
             color: white;
             font-weight: 700;
+            padding-top: 3rem;
           }
+             a{
+           img{
+             padding-right: 0.5rem;
+           }
+         }
           p{
                margin-top:0.5rem ;
                display: flex;
@@ -75,7 +72,7 @@ header{
           height:3.7rem ;
           background-color: #FF6B1A;
           margin-left:1.3rem ;      
-         
+          
           h2{
                font-size:1.9rem ;
                color: white;
@@ -85,51 +82,61 @@ header{
                width: 1.7rem;
                height: 1.4rem;
            }
+           
 
      }
-     
+   
 .navbar-menu:hover ul {
-   display: block;
+      display: grid;
+      grid-template-columns: repeat(1,auto);
+      grid-template-rows: repeat(4,auto);
+      place-items: center;
+      row-gap: 1rem;
+     padding-top: 1rem;
+     padding-bottom: 1rem;
+     background-color: #FF6B1A;
 }
+
 .menu ul{
    display: none;
+     a{
+        color: white;
+     }
 }
-menu ul {
-      
-        display: flex;
-        justify-content: center;
-        color: rgb(255, 245, 245);
-        border-radius: 0.2rem;
-        margin-bottom: 0.8rem;
-}
-
-
 .navbar-menu ul {
-    
-    padding-top: 10px;
     position:absolute;
     top:70%;
     left:13px;
-    background-color: #FF6B1A;
     width:103px;
     border-radius:0rem 0rem 1rem 1rem;
     
 }
 
 @media (min-width: 991px) {
+     .navbar-menu{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           align-items: center;
+           width: 100%;
+           
+     }
   .menu ul {
      display: flex;
-   
-  }
-  .navbar-menu{
-     display: flex;
-  }
+     position: static;
+     justify-content: center;
+     align-items: center;
+     gap: 6.1rem;
+     color: #FFFFFF;
+     font-weight: 500;
+     font-size:1.7rem ;
+     }
+
   .menu-btn{
      display: none;
   }
-  ul{
-    
-  }
+  
+ 
 }
  .landing-page{
      height: 37rem;
@@ -150,7 +157,7 @@ menu ul {
           width:20rem;
           height: auto;
           z-index: 0;
-          opacity:0.2;
+          opacity:0.2;                                 
       }
         
      
@@ -176,20 +183,34 @@ menu ul {
           font-weight: 300;
         }
       }
-.gallery{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-wrap: wrap;
-     margin-top: 3.9rem;
-     row-gap:3rem ;
+       .gallery{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      grid-template-rows: repeat(6,auto);
+      margin-top: 3.9rem;
+     background-color: #F5F5F5;
+     row-gap: 2rem;
+     place-items: center;
+}
+@media (max-width:975px) and (min-width:657px){
+    .gallery{
+       display: grid;
+       grid-template-columns: repeat(2,auto);
+       grid-template-rows:repeat(3,auto) ;
+       margin-top: 3.9rem;
+      
+    }
+      .gallery .cards:nth-child(5){
+        margin-bottom: 16rem;
+    }
 }
 .cards{
-     width:32rem;
+      width:32rem;
      height: 20rem;
      box-shadow: 0px 10px 20px 0px rgba(20, 20, 20, 0.1);
      background-color: white;
-     border-radius: 0.4rem;
+     border-radius: 1.2rem;
+     border-top:0.5rem solid  #FF6B1A;
      h3{
            font-size: 2.4rem;
            margin-bottom: 1rem;
@@ -214,16 +235,16 @@ menu ul {
  @media (min-width:991px){
 
     .logo-wrapper a img{
-        left: 23rem;
+        left: 34rem;
     }
   
     .gallery{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
-        margin-right: 1.5rem;
+        grid-template-rows: repeat(2,auto);
         .cards{
             width: 29rem;
+            
                 p{
                 font-size: 1.6rem;
                 padding-left: 1.4rem;
